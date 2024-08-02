@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Form(props) {
+ function Form(props) {
 
     function handleChange(event) {
         setName(event.target.value);
@@ -35,3 +35,5 @@ export default function Form(props) {
         </form>
     );
 }
+
+export default Form;
