@@ -15,19 +15,28 @@ html {
 }
 
 h1,
+h2,
+ul,
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
 h2 {
   margin-bottom: 0;
 }
 
 ul {
   list-style: none;
-  padding: 0;
 }
 
 button {
   border: none;
-  margin: 0;
-  padding: 0;
   width: auto;
   overflow: visible;
   background: transparent;
@@ -51,7 +60,6 @@ textarea {
   font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
-  margin: 0;
 }
 
 button,
@@ -67,9 +75,7 @@ body {
   width: 100%;
   max-width: 68rem;
   margin: 0 auto;
-  font:
-    1.6rem/1.25 Arial,
-    sans-serif;
+  font: 1.6rem/1.25 Arial, sans-serif;
   background-color: #f5f5f5;
   color: #4d4d4d;
 }
@@ -81,7 +87,6 @@ body {
   }
 }
 
-/*END RESETS*/
 /* GLOBAL STYLES */
 .form-group>input[type="text"] {
   display: inline-block;
@@ -150,25 +155,18 @@ body {
 }
 
 [class*="stack"]>* {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 
-.stack-small>*+* {
+.stack-small>*+*,
+.stack-large>*+* {
   margin-top: 1.25rem;
 }
 
-.stack-large>*+* {
-  margin-top: 2.5rem;
-}
-
 @media screen and (min-width: 550px) {
-  .stack-small>*+* {
-    margin-top: 1.4rem;
-  }
-
+  .stack-small>*+*,
   .stack-large>*+* {
-    margin-top: 2.8rem;
+    margin-top: 1.4rem;
   }
 }
 
@@ -182,9 +180,7 @@ body {
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   position: relative;
-  box-shadow:
-    0 2px 4px 0 rgba(0, 0, 0, 0.2),
-    0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (min-width: 550px) {
@@ -195,8 +191,7 @@ body {
 
 .todoapp>* {
   max-width: 50rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .todoapp>form {
@@ -205,9 +200,7 @@ body {
 
 .todoapp>h1 {
   display: block;
-  max-width: 100%;
   text-align: center;
-  margin: 0;
   margin-bottom: 1rem;
 }
 
@@ -247,7 +240,7 @@ body {
 
 .filters {
   width: 100%;
-  margin: unset auto;
+  margin: auto;
 }
 
 /* Todo item styles */
@@ -307,10 +300,8 @@ body {
 
 .c-cb>label {
   font-size: inherit;
-  font-family: inherit;
   line-height: inherit;
   display: inline-block;
-  margin-bottom: 0;
   padding: 8px 15px 5px;
   cursor: pointer;
   touch-action: manipulation;
